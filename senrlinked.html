@@ -187,41 +187,43 @@
 }
 
 
-/* Voorkomt dat vlakken over elkaar heen schuiven of content wordt afgesneden */
+/* Houdt de complete pagina exact 500 px hoog.
+   Het witte tekstvlak en het menu staan nog iets lager; de hoogte is gelijk gebleven. */
 .tab-wrapper {
   width: min(1000px, 100%);
-  min-height: 500px;
-  height: auto;
+  height: 500px;
+  min-height: 0;
+  overflow: hidden;
 }
 
 .banner {
-  min-height: 145px;
-  height: auto;
+  height: 145px;
+  min-height: 0;
 }
 
 .tab-page {
-  min-height: 305px;
-  height: auto;
-  align-items: stretch;
-  padding: 0 14px 14px 12px;
+  height: 355px;
+  min-height: 0;
+  align-items: flex-start;
+  padding: 40px 14px 14px 12px;
   gap: 14px;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .tab-menu {
   flex: 0 0 205px;
   width: 205px;
   padding-left: 0;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .tab-content-area {
   flex: 1 1 auto;
   min-width: 0;
-  height: auto;
-  min-height: 341px;
-  max-height: none;
-  overflow-y: auto;
+  height: 292px;
+  min-height: 0;
+  max-height: 292px;
+  overflow-y: hidden;
   margin: 0;
 }
 
@@ -309,9 +311,9 @@
         <p>Bekijk de LinkedIn-video’s en gebruik wat je leert bij de opdrachten van All Connected.</p>
         <p>Maak tijdens het kijken korte aantekeningen. Schrijf vooral op welke begrippen, onderdelen of keuzes je later nodig hebt bij hardware- en softwarewerkzaamheden.</p>
         <p>Je hoeft niet alles in één keer te begrijpen. Kijk gericht, pauzeer wanneer nodig en noteer wat belangrijk is.</p>
-        <p><a class="action-link" href="https://www.linkedin.com/learning/basisbeginselen-van-netwerken-de-basis-van-netwerken?contextUrn=urn%3Ali%3AlearningCollection%3A7441348246800850944&u=84048860" target="_blank" rel="noopener">Basisbeginselen van netwerken</a></p>
-        <p><a class="action-link" href="https://www.linkedin.com/learning/learning-subnetting-2019?contextUrn=urn%3Ali%3AlearningCollection%3A7441348246800850944&u=84048860" target="_blank" rel="noopener">Subnetting leren</a></p>
-        <p><a class="action-link" href="https://www.linkedin.com/learning/build-and-configure-networks-with-packet-tracer?contextUrn=urn%3Ali%3AlearningCollection%3A7441348246800850944&u=84048860" target="_blank" rel="noopener">Bouw en configureer netwerken met Packet Tracer</a></p>
+        <p><a class="action-link" href="https://www.linkedin.com/learning/basisbeginselen-van-netwerken-de-basis-van-netwerken" target="_blank" rel="noopener noreferrer" onclick="window.open(this.href, '_blank', 'noopener'); return false;">Basisbeginselen van netwerken</a></p>
+        <p><a class="action-link" href="https://www.linkedin.com/learning/learning-subnetting-2019?contextUrn=urn%3Ali%3AlearningCollection%3A7441348246800850944&amp;u=84048860" target="_blank" rel="noopener">Subnetting leren</a></p>
+        <p><a class="action-link" href="https://www.linkedin.com/learning/build-and-configure-networks-with-packet-tracer?contextUrn=urn%3Ali%3AlearningCollection%3A7441348246800850944&amp;u=84048860" target="_blank" rel="noopener">Bouw en configureer netwerken met Packet Tracer</a></p>
       </div>
 
       <div id="portfolio" class="tab-content">
