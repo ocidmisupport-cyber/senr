@@ -2,7 +2,7 @@
 <html lang="nl">
 <head>
 <meta charset="UTF-8">
-<title>Stichting Praktijkleren - Service Monteur</title>
+<title>ICT Route - Windows Server en Helpdesk</title>
 
 <style>
 * {
@@ -103,7 +103,7 @@
 .tab-content-area {
   flex: 1 1 auto;
   min-width: 0;
-  height: 341px;
+  height: 321px;
   padding: 14px 24px;
   overflow-y: hidden;
   background: rgba(255,255,255,0.74);
@@ -186,41 +186,44 @@
   margin-bottom: 4px;
 }
 
-/* Voorkomt dat vlakken over elkaar heen schuiven of content wordt afgesneden */
+
+/* Houdt de complete pagina exact 500 px hoog.
+   Het witte tekstvlak en het menu staan nog iets lager; de hoogte is gelijk gebleven. */
 .tab-wrapper {
   width: min(1000px, 100%);
-  min-height: 500px;
-  height: auto;
+  height: 500px;
+  min-height: 0;
+  overflow: hidden;
 }
 
 .banner {
-  min-height: 145px;
-  height: auto;
+  height: 145px;
+  min-height: 0;
 }
 
 .tab-page {
-  min-height: 355px;
-  height: auto;
-  align-items: stretch;
-  padding: 0 14px 14px 12px;
+  height: 355px;
+  min-height: 0;
+  align-items: flex-start;
+  padding: 40px 14px 14px 12px;
   gap: 14px;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .tab-menu {
   flex: 0 0 205px;
   width: 205px;
   padding-left: 0;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .tab-content-area {
   flex: 1 1 auto;
   min-width: 0;
-  height: auto;
-  min-height: 341px;
-  max-height: none;
-  overflow-y: auto;
+  height: 292px;
+  min-height: 0;
+  max-height: 292px;
+  overflow-y: hidden;
   margin: 0;
 }
 
@@ -249,6 +252,7 @@
     margin-bottom: 0;
   }
 }
+
 </style>
 </head>
 
@@ -257,79 +261,110 @@
 <div class="tab-wrapper">
 
   <section class="banner">
-    <h1>Stichting Praktijkleren</h1>
-    <p>Je werkt met drie onderdelen: Servicemonteur 1, Servicemonteur 2 en servicedesk 2022.</p>
+    <h1>ICT Route: Windows Server en IT-helpdesk</h1>
+    <p>Je bekijkt drie LinkedIn Learning-video’s over Windows Server 2022, Active Directory en werken op de IT-helpdesk. Gebruik wat je leert bij de praktijkopdrachten en je portfolio.</p>
 
     <div class="chips">
-      <span>📘 Procedures</span>
-      <span>💬 Klantmeldingen</span>
-      <span>🏝️ Servicedesk 2022</span>
+      <span>💻 ICT Route</span>
+      <span>🎥 LinkedIn Learning</span>
+      <span>🖥️ Windows Server</span>
+      <span>👥 Active Directory</span>
+      <span>🎧 Helpdesk</span>
       <span>📁 Portfolio</span>
     </div>
   </section>
 
   <div class="tab-page">
     <div class="tab-menu">
-      <button class="tab-button active" onclick="openTab(event, 'procedures')">Servicemonteur 1</button>
-      <button class="tab-button" onclick="openTab(event, 'meldingen')">Servicemonteur 2</button>
-      <button class="tab-button" onclick="openTab(event, 'servicedesk')">servicedesk 2022</button>
+      <button class="tab-button active" onclick="openTab(event, 'start')">Start</button>
+      <button class="tab-button" onclick="openTab(event, 'server')">Windows Server 2022</button>
+      <button class="tab-button" onclick="openTab(event, 'ad')">Active Directory</button>
+      <button class="tab-button" onclick="openTab(event, 'helpdesk')">IT-helpdesk</button>
       <button class="tab-button" onclick="openTab(event, 'portfolio')">Portfolio</button>
+      <button class="tab-button" onclick="openTab(event, 'bewijs')">Bewijs</button>
+      <button class="tab-button" onclick="openTab(event, 'onthoud')">Onthoud</button>
     </div>
 
     <div class="tab-content-area">
 
-      <div id="procedures" class="tab-content active">
-        <h2>Servicemonteur 1</h2>
-        <p>In deze lessen leer je met standaardprocedures werken. Je leert welke procedure je in een bepaalde situatie moet gebruiken en hoe je je kennis en ervaring daarbij kunt inzetten.</p>
-        <ul>
-          <li>Je herkent wanneer je een procedure nodig hebt.</li>
-          <li>Je gebruikt instructies stap voor stap.</li>
-          <li>Je zoekt antwoorden op in FAQ's.</li>
-          <li>Je legt uit waarom je een bepaalde aanpak kiest.</li>
-        </ul>
-        <p class="info"><strong>Tip:</strong> noteer voorbeelden van procedures of FAQ's die je later bij praktijkopdrachten opnieuw kunt gebruiken.</p>
-        <p><a class="action-link" href="https://www.stichtingpraktijkleren.nl/index.php?id=150862" target="_blank" rel="noopener">Open Servicemonteur 1</a></p>
+      <div id="start" class="tab-content active">
+        <h2>Start met de LinkedIn-video’s</h2>
+        <p>In deze ICT-route bekijk je drie LinkedIn Learning-video’s die goed aansluiten bij systeembeheer en servicedeskwerk.</p>
+        <p>Je leert meer over Windows Server 2022, Active Directory en de basis van werken op een IT-helpdesk.</p>
+        <p>Maak tijdens het kijken korte aantekeningen. Schrijf vooral begrippen, stappen en voorbeelden op die je later kunt gebruiken bij praktijkopdrachten.</p>
+        <p class="note"><strong>Belangrijk:</strong> kijk actief, pauzeer wanneer nodig en verzamel bewijs voor je portfolio.</p>
       </div>
 
-      <div id="meldingen" class="tab-content">
-        <h2>Servicemonteur 2</h2>
-        <p>In deze module ga je in iedere les met een andere melding van een klant aan de slag. De nadruk ligt op het analyseren van de melding.</p>
-        <p>Je onderzoekt hoe je duidelijk krijgt wat het probleem nu eigenlijk is. Daarbij leer je goede vragen stellen, informatie ordenen en bepalen welke vervolgstap logisch is.</p>
+      <div id="server" class="tab-content">
+        <h2>Windows Server 2022</h2>
+        <p>In deze cursus laat Ed Liberman zien hoe je een nieuwe Windows Server 2022-server plant, installeert, configureert en opschoont.</p>
+        <p>Je krijgt een beeld van de stappen die nodig zijn om een server goed voor te bereiden en netjes in te richten.</p>
         <ul>
-          <li>Je leest of beluistert de klantmelding zorgvuldig.</li>
-          <li>Je haalt de belangrijkste informatie uit de melding.</li>
-          <li>Je bepaalt welke informatie nog ontbreekt.</li>
-          <li>Je formuleert wat het echte probleem waarschijnlijk is.</li>
+          <li>Serverinstallatie voorbereiden.</li>
+          <li>Windows Server 2022 installeren.</li>
+          <li>Basisconfiguratie uitvoeren.</li>
+          <li>Serveromgeving controleren en opschonen.</li>
         </ul>
-        <p><a class="action-link" href="https://www.stichtingpraktijkleren.nl/index.php?id=150864" target="_blank" rel="noopener">Open Servicemonteur 2</a></p>
+        <p><a class="action-link" href="https://www.linkedin.com/learning/windows-server-2022-installation-and-configuration?contextUrn=urn%3Ali%3AlearningCollection%3A7441348246800850944&amp;u=84048860" target="_blank" rel="noopener">Bekijk Windows Server 2022</a></p>
       </div>
 
-      <div id="servicedesk" class="tab-content">
-        <h2>servicedesk 2022</h2>
-        <p>In deze simulatieomgeving werk je als servicedeskmedewerker op het vakantie-eiland <strong>AmeRijck</strong>. Je krijgt te maken met vragen, meldingen en situaties die passen bij een ICT-servicedesk.</p>
-        <p>Je gebruikt wat je eerder hebt geleerd: zorgvuldig lezen, het probleem analyseren, passende informatie zoeken en duidelijk vastleggen wat je doet.</p>
+      <div id="ad" class="tab-content">
+        <h2>Active Directory</h2>
+        <p>Active Directory is een belangrijk onderdeel van Windows Server. In deze cursus leer je hoe je Active Directory Domain Services installeert en configureert.</p>
+        <p>Je ziet hoe gebruikers, computers en netwerktoegang binnen een Windows Server-omgeving beheerd kunnen worden.</p>
         <ul>
-          <li>Je oefent met realistische servicedesk-situaties.</li>
-          <li>Je bepaalt welke melding of vraag prioriteit heeft.</li>
-          <li>Je gebruikt procedures en informatiebronnen om keuzes te maken.</li>
-          <li>Je legt je oplossing of vervolgstap duidelijk vast.</li>
+          <li>Active Directory Domain Services begrijpen.</li>
+          <li>AD DS installeren en configureren.</li>
+          <li>Gebruikers en systemen centraal beheren.</li>
+          <li>De rol van Active Directory in netwerkbeheer herkennen.</li>
         </ul>
-        <p class="info"><strong>Tip:</strong> maak screenshots van belangrijke stappen in de simulatie. Die kun je gebruiken als bewijs in je portfolio.</p>
-        <p><a class="action-link" href="https://www.stichtingpraktijkleren.nl/ict/it-systems-devices/5f34c5ca6f7fc127026cde83/" target="_blank" rel="noopener">Open servicedesk 2022</a></p>
+        <p><a class="action-link" href="https://www.linkedin.com/learning/windows-server-2022-install-and-configure-active-directory?contextUrn=urn%3Ali%3AlearningCollection%3A7441348246800850944&amp;u=84048860" target="_blank" rel="noopener">Bekijk Active Directory</a></p>
+      </div>
+
+      <div id="helpdesk" class="tab-content">
+        <h2>IT-helpdesk voor beginners</h2>
+        <p>Deze cursus is een goede start voor iedereen die meer wil leren over technische ondersteuning en werken als IT-helpdesktechnicus.</p>
+        <p>Robert McMillen behandelt basisverantwoordelijkheden zoals software, netwerken, probleemoplossing en klantgericht werken.</p>
+        <ul>
+          <li>Basis van IT-helpdeskwerk.</li>
+          <li>Software- en netwerkproblemen herkennen.</li>
+          <li>Probleemoplossend werken.</li>
+          <li>Soft skills voor goede klantenservice.</li>
+        </ul>
+        <p><a class="action-link" href="https://www.linkedin.com/learning/it-help-desk-for-beginners-22349140?contextUrn=urn%3Ali%3AlearningCollection%3A7441348246800850944&amp;u=84048860" target="_blank" rel="noopener">Bekijk IT-helpdesk</a></p>
       </div>
 
       <div id="portfolio" class="tab-content">
         <h2>Portfolio-tip</h2>
-        <p>Laat in je portfolio zien dat je gestructureerd kunt werken met informatie en klantmeldingen. Bewaar niet alleen eindantwoorden, maar ook bewijs van je denkproces.</p>
+        <p>Maak screenshots van je voortgang en noteer kort wat je per video hebt geleerd. Zo laat je zien dat je de theorie actief hebt verwerkt.</p>
+        <p class="info"><strong>Tip:</strong> koppel je aantekeningen aan praktijkopdrachten over servers, gebruikersbeheer of servicedeskwerk.</p>
         <ul>
-          <li>Screenshot of notitie van de lessen die je hebt gemaakt.</li>
-          <li>Voorbeeld van een gebruikte procedure, instructie of FAQ.</li>
-          <li>Korte analyse van een klantmelding: wat is het probleem?</li>
-          <li>Screenshot of bewijs uit de simulatieomgeving servicedesk 2022.</li>
-          <li>Korte uitleg: welke informatie miste je nog?</li>
-          <li>Reflectie: wat ging goed en wat wil je nog oefenen?</li>
+          <li>Screenshot van bekeken video’s.</li>
+          <li>Korte samenvatting per onderwerp.</li>
+          <li>Voorbeeld van een begrip dat je kunt toepassen.</li>
+          <li>Reflectie: wat begrijp je al en wat wil je nog oefenen?</li>
         </ul>
-        <p class="note"><strong>Belangrijk:</strong> verzamel bewijs terwijl je werkt. Dan hoef je achteraf niet alles opnieuw op te zoeken.</p>
+      </div>
+
+      <div id="bewijs" class="tab-content">
+        <h2>Wat bewaar je als bewijs?</h2>
+        <p>Bewijs laat zien dat je actief hebt gewerkt aan de ICT-route. Verzamel daarom tijdens het kijken en verwerken meerdere soorten bewijs.</p>
+        <ul>
+          <li>Aantekeningen over Windows Server 2022.</li>
+          <li>Aantekeningen over Active Directory.</li>
+          <li>Aantekeningen over IT-helpdesk en klantcommunicatie.</li>
+          <li>Screenshots van je voortgang in LinkedIn Learning.</li>
+          <li>Korte uitleg hoe je deze kennis kunt gebruiken in de praktijk.</li>
+        </ul>
+        <p>Bewaar je bewijs netjes, zodat je het later makkelijk kunt toevoegen aan je portfolio.</p>
+      </div>
+
+      <div id="onthoud" class="tab-content">
+        <h2>Onthoud dit goed</h2>
+        <p>Deze pagina is je startpunt voor drie belangrijke onderwerpen: servers, gebruikersbeheer en helpdeskwerk.</p>
+        <p>Je hoeft niet alles meteen te beheersen. Door gericht te kijken, aantekeningen te maken en voorbeelden te koppelen aan praktijkopdrachten, wordt de theorie duidelijker.</p>
+        <p>Gebruik wat je leert bij opdrachten waarin je systemen voorbereidt, gebruikers ondersteunt en meldingen oplost.</p>
+        <p class="note"><strong>Belangrijk:</strong> werk actief mee, bewaar je bewijs en reflecteer kort op wat je hebt geleerd.</p>
       </div>
 
     </div>
