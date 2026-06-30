@@ -18,9 +18,9 @@ body{display:grid;place-items:start center;overflow:hidden}
   box-shadow:var(--shadow)}
 .page-shell:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.06) 0 1px,transparent 1px 80px),linear-gradient(0deg,rgba(255,255,255,.04) 0 1px,transparent 1px 80px);opacity:.28;pointer-events:none}
 .header{position:relative;z-index:1;height:118px;padding:12px 22px 6px;color:white;overflow:hidden}
-.header-row{display:flex;align-items:center;gap:18px}
-.header h1{margin:0;font-size:27px;line-height:1.05;color:white;white-space:nowrap}
-.picker{flex:0 0 470px;min-width:0;max-width:470px}
+.header-row{display:flex;align-items:center;gap:18px;justify-content:space-between}
+.header h1{margin:0;font-size:27px;line-height:1.05;color:white;white-space:nowrap;flex:0 0 auto}
+.picker{flex:0 0 470px;min-width:0;max-width:470px;margin-left:auto}
 .picker select{width:100%;border:2px solid rgba(255,255,255,.95);border-radius:999px;padding:8px 14px;font-size:12.5px;font-weight:800;color:#12333a;background:rgba(255,255,255,.88);outline:none;box-shadow:0 2px 8px rgba(0,0,0,.14)}
 .header p{margin:6px 0 0;max-width:880px;font-size:13px;line-height:1.22;color:white}
 .chips{display:flex;gap:6px;flex-wrap:nowrap;margin-top:6px}
