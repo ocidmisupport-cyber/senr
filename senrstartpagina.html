@@ -82,7 +82,8 @@
 
     .left-column {
       display: grid;
-      grid-template-rows: auto 1fr;
+      grid-template-rows: auto auto;
+      align-content: start;
       gap: 14px;
     }
 
@@ -194,7 +195,7 @@
 
     .action-list {
       display: grid;
-      gap: 7px;
+      gap: 3px;
       margin-bottom: 9px;
     }
 
@@ -203,7 +204,7 @@
       grid-template-columns: 46px 1fr 22px;
       align-items: center;
       gap: 12px;
-      min-height: 64px;
+      min-height: 62px;
       padding: 8px 14px 8px 12px;
       text-decoration: none;
       color: inherit;
@@ -264,7 +265,12 @@
     }
 
     .project-card {
-      min-height: 68px;
+      min-height: 66px;
+    }
+
+    .self-review-card {
+      min-height: 60px;
+      margin-top: 8px;
     }
 
     @media (max-width: 760px) {
@@ -357,6 +363,15 @@
           <div>
             <h2 class="action-title">Beroepsproject S&R Trucks</h2>
             <p class="action-desc">Lever je eindopdracht in en laat zien wat je kunt</p>
+          </div>
+          <div class="arrow" aria-hidden="true">→</div>
+        </a>
+
+        <a class="action-card self-review-card" href="senrzelfbeoordeling.html" target="_top" aria-label="Open Zelfbeoordeling S&amp;R Trucks">
+          <div class="icon-box" aria-hidden="true">★</div>
+          <div>
+            <h2 class="action-title">Zelfbeoordeling</h2>
+            <p class="action-desc">Kijk terug op je eigen ontwikkeling</p>
           </div>
           <div class="arrow" aria-hidden="true">→</div>
         </a>
